@@ -15,8 +15,5 @@ async fn main(req: Request, env: Env, ctx: Context) -> Result<Response> {
 
     let router = dynamic_router::DynamicRouter::new(&config);
 
-    // Use the parsed configuration
-    console_log!("{:#?}", router);
-
-    Response::ok("Hello, World!")
+    router.route_request(req, &env, &ctx).await
 }

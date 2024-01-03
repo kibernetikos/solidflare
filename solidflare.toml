@@ -4,7 +4,7 @@
 [services]
 
 [services.notification_service]
-url = "http://localhost:8000/notification"
+url = "https://google.com"
 
 # Define routing configurations
 [[routes]]
