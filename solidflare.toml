@@ -1,0 +1,16 @@
+# Example Configuration for API Gateway
+
+# Define services with their respective configurations
+[services]
+
+[services.notification_service]
+url = "http://localhost:8000/notification"
+
+# Define routing configurations
+[[routes]]
+path = "/notify"
+service = "notification_service"
+
+[[routes]]
+path = "/user"
+service = "user_service"
